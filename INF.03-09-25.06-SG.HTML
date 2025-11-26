@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF.03-09-25.06-SG</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 800px; 
+            margin: 20px auto;
+            display: flex; 
+            flex-direction: column;
+        }
+
+        header, footer, main, aside, section {
+            margin: 0;
+            padding: 10px 0;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        header {
+            height: 80px;
+            border-bottom: none;
+        }
+
+
+        main {
+            display: flex;
+            padding: 30px;
+            border: 1px solid black;
+            height: 300px;
+        }
+        
+        main::before {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        footer {
+            height: 80px;
+            border-top: none;
+        }
+
+        #lewa-kolumna-main {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid black;
+            padding: 0;
+        }
+
+        aside {
+            flex: 1; 
+            border: 1px solid black;
+        }
+        #blok-nawigacyjny {
+            height: 100px;
+            border-bottom: 1px solid black;
+            padding: 10px 0;
+        }
+        #sekcje-dolne {
+            flex: 1;
+            display: flex;
+            padding: 0;;
+        }
+        
+        #sekcja-lewa {
+            flex: 1;
+            border-right: 1px solid black;
+            padding: 10px;
+        }
+        #sekcja-srodkowa {
+            flex: 1;
+            padding: 10px;
+            
+        }
+
+        header, footer {
+            border-width: 2px;
+        }
+        main {
+            border-width: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="https://hugosik.github.io/odwolywanie-do-arkuszy-semantycznych/">Wróć</a>
+    <header>
+        Blok nagłówkowy
+    </header>
+
+    <main>
+        Blok główny
+        <section id="lewa-kolumna-main">
+            <section id="blok-nawigacyjny">
+                Blok nawigacyjny
+            </section>
+            <section id="sekcje-dolne">
+                <section id="sekcja-lewa">
+                    Sekcja lewa
+                </section>
+                <section id="sekcja-srodkowa">
+                    Sekcja środkowa
+                </section>
+            </section>
+        </section>
+
+        <aside>
+            Blok boczny
+        </aside>
+    </main>
+
+    <footer>
+        Blok stopki
+    </footer>
+    <div>
+        <br><br>
+        Wzór:
+        <br>
+        <img src="09.png">
+    </div>
+
+</body>
+</html>
